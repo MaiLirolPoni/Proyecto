@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos Númericos</title>
+    <link rel="stylesheet" href="StyleMetodos.css">
+    <script type="text/javascript" src="ScriptMetodos.js"></script>
+
+</head>
+<body>
+
+    <!--Este es nuestro encabezado, donde se navega el contenido y contiene el logotipo-->
+    <div class="header">
+        <img src="logo.png"> 
+        
+        <span>Métodos Numéricos</span>
+        
+        <div class="interpolacion">
+            <button>Interpolación</button>
+                <div class="interpolacion-opciones">
+                    <a href="MetodosNumericos.html">Lineal</a>
+                    <a href="cuadratica.html">Cuadratica</a>
+                </div>
+        </div>
+
+        <div class="interpolacion">
+            <button>Lagrange</button>
+            <div class="interpolacion-opciones">
+                <a href="lagrange1ER.html">1er orden</a>
+                <a href="lagrange2DO.html">2do orden</a>
+            </div>
+        </div>
+    
+    </div>
+
+    <!--La siguiente sección es la "calculadora" como tal-->
+    <div class="container">
+        <h1>Interpolación de Lagrange, Segundo Grado</h1>
+        <p>Introduce los valores para realizar el cálculo</p>
+        <div class="funcion">
+            <label>f(X)= <input type="number" id="fx" disabled></label><br><br>
+            <label>f(X0)= <input type="number" id="fx0"></label><br><br>
+            <label>f(X1)= <input type="number" id="fx1"></label><br><br>
+            <label>f(X2)= <input type="number" id="fx2"></label><br><br>
+        </div>
+        <div class="valor">
+            <label>X= <input type="number" id="x"></label><br><br>
+            <label>X0= <input type="number" id="x0"></label><br><br>
+            <label>X1= <input type="number" id="x1"></label><br><br>
+            <label>X2= <input type="number" id="x2"></label><br><br>
+                
+        </div><br>
+
+        <button onclick="lagrange2()">Calcular</button>
+        <button onclick="borrarB()">Reestablecer</button>
+        <div id="r"></div>
+        
+        <p>Para calcular el error verdadero y error relativo porcentual introduce el valor verdadero</p>
+        <label>Valor verdadero= <input type="number" id="ev"></label><br><br>
+        
+        <button onclick="error()">Calcular</button>
+        <button onclick="borrar2()">Reestablecer</button>
+        <div id="error"></div>
+    </div>
+
+    
+    
+</body>
+</html
